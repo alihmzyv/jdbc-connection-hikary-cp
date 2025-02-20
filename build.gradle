@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.alihmzyv'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'ch.qos.logback:logback-classic:1.4.12'
+    implementation 'com.oracle.database.jdbc:ojdbc11:23.6.0.24.10'
+    implementation 'com.zaxxer:HikariCP:6.2.1'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
